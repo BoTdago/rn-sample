@@ -6,7 +6,7 @@ const Home = () => {
     return (
         <SafeAreaView style={{ flex: 1, height: "100%" }}>
 
-            <HeaderPage />
+            <HeaderPage title={"Home"} />
         </SafeAreaView>
     )
 }
