@@ -10,6 +10,7 @@ import { Ionicons } from '@expo/vector-icons';
 
 //Tabnav components
 import Home from "../screens/home";
+import PwdStorer from "../screens/pwdStorer";
 
 const RootNav = () => {
     return (
@@ -41,7 +42,7 @@ const RootNav = () => {
             >
 
                 <Tab.Screen name="home" component={Home} />
-                <Tab.Screen name="pwd" component={Home} />
+                <Tab.Screen name="pwd" component={PwdStorer} />
             </Tab.Navigator>
         </NavigationContainer >
     )

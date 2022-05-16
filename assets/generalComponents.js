@@ -5,14 +5,22 @@ import { Ionicons } from '@expo/vector-icons';
 import { Colors } from './Styles';
 
 export const HeaderPage = ({ title, }) => (
-    <View style={{}}>
-        <Text>{title}</Text>
+    <View style={Styles.headerPage}>
+        <Text style={Styles.titlePage}>{title}</Text>
     </View>
 )
 
-const Styles = StyleSheet.create({
-    HeaderPageText: {
-        padding: 10
-    }
+export const Styles = StyleSheet.create({
+    headerPage: {
+        padding: 20,
+        backgroundColor: Colors.white,
+        flexDirection: "row",
+        alignItems: "center",
+    },
+    titlePage:{
+        fontSize: 24,
+        color: Colors.middleblue,
+        fontWeight: 'bold'
+    },
+    
 })
-
