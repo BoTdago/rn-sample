@@ -12,7 +12,7 @@ export const HeaderPage = ({ title, freccia, navigation }) => (
             </Pressable>
             : null}
         <Text style={Styles.titlePage}>{title}</Text>
-    </View >
+    </View>
 )
 
 export const Styles = StyleSheet.create({
