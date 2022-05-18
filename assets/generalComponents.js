@@ -4,10 +4,15 @@ import { View, Text, Pressable, StyleSheet } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { Colors } from './Styles';
 
-export const HeaderPage = ({ title, }) => (
+export const HeaderPage = ({ title, freccia, navigation }) => (
     <View style={Styles.headerPage}>
+        {freccia ?
+            <Pressable onPress={() => navigation.goBack()} style={{ marginLeft: 0, paddingLeft: 0, paddingRight: 5 }} color={Colors.transparent}>
+                <Ionicons name="arrow-back" size={24} color={Colors.middleblue} />
+            </Pressable>
+            : null}
         <Text style={Styles.titlePage}>{title}</Text>
-    </View>
+    </View >
 )
 
 export const Styles = StyleSheet.create({
@@ -17,10 +22,10 @@ export const Styles = StyleSheet.create({
         flexDirection: "row",
         alignItems: "center",
     },
-    titlePage:{
+    titlePage: {
         fontSize: 24,
         color: Colors.middleblue,
         fontWeight: 'bold'
     },
-    
+
 })
