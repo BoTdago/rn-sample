@@ -40,15 +40,16 @@ const PwdStorer = () => {
         }
 
 
-        const cred = storedCred;
         //Aggiungi le nuove credenziali
+
+        let cred = [...storedCred];
         cred.push({
             email: email,
             pwd: pwd,
             id: cred.length === 0 ? 0 : cred[cred.length - 1].id + 1
         })
         try {
-            const ok = await AsyncStorage.setItem("credentials", JSON.stringify(cred));
+            await AsyncStorage.setItem("credentials", JSON.stringify(cred));
         } catch (error) {
             console.log(error)
         }
@@ -71,9 +72,7 @@ const PwdStorer = () => {
         } catch (error) {
             Alert.alert("Errore", "Impossibile caricare le credenziali")
         }
-
-        AsyncStorage.removeItem("credentials")
-
+        await AsyncStorage.removeItem("credentials")
     }
 
     //Funzione che viene lanciata appena si apre questa pagina
@@ -92,9 +91,11 @@ const PwdStorer = () => {
 
             {/* MOSTRA PWD */}
             <FlatList
+                extraData={storedCred}
                 data={storedCred}
                 keyboardShouldPersistTaps={"never"}
                 keyboardDismissMode={"on-drag"}
+                ListEmptyComponent={<Text style={Styles.generalText}>Non ci sono dati salvati</Text>}
                 ListHeaderComponent={
                     <>
                         {/* USER INPUT */}
