@@ -54,7 +54,7 @@ const Es2 = ({ navigation, route }) => {
                     {pad(duration.minutes()) + ":"}
                 </Text>
                 <Text style={Styles.chronoText}>
-                    {pad(duration.seconds()) + ":"}
+                    {pad(duration.seconds()) + ","}
                 </Text>
                 <Text style={Styles.chronoText}>
                     {pad(parseInt(duration.milliseconds() / 10))}
@@ -76,7 +76,7 @@ const Es2 = ({ navigation, route }) => {
                     {pad(duration.minutes()) + ":"}
                 </Text>
                 <Text style={Styles.chronoTextPartials}>
-                    {pad(duration.seconds()) + ":"}
+                    {pad(duration.seconds()) + ","}
                 </Text>
                 <Text style={Styles.chronoTextPartials}>
                     {pad(parseInt(duration.milliseconds() / 10))}
@@ -107,7 +107,6 @@ const Es2 = ({ navigation, route }) => {
                     setTotalState(0)
                     setStart(new Date().getTime())
                     setNow(new Date().getTime())
-                    setIsStarted(false)
                     setPartials([])
                 }}
                     style={{ backgroundColor: Colors.middleblue, margin: 10, borderRadius: 12 }}>

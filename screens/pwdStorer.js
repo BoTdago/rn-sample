@@ -154,7 +154,7 @@ const PwdStorer = () => {
                             <Text style={Styles.generalText}><Ionicons name="ios-key-outline" size={24} color={Colors.darkblue} /></Text>
                             <TextInput
                                 style={[Styles.generalText, { backgroundColor: Colors.white }]}
-                                value={item.pwd + "dsd"}
+                                value={item.pwd}
                                 editable={false}
                                 secureTextEntry={item.id != view_FL_PWD_I}
                             />
