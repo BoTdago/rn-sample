@@ -124,7 +124,7 @@ const Es2 = ({ navigation, route }) => {
                     renderItem={({ item }) =>
                         <RenderPartials item={item}/>
                     }
-                    keyExtractor={({id}) => id}
+                    keyExtractor={(i) => i}
                     style={{marginBottom: 240}}
                 />
             </View>
