@@ -72,7 +72,6 @@ const PwdStorer = () => {
         } catch (error) {
             Alert.alert("Errore", "Impossibile caricare le credenziali")
         }
-        await AsyncStorage.removeItem("credentials")
     }
 
     //Funzione che viene lanciata appena si apre questa pagina
