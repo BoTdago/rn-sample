@@ -6,7 +6,7 @@ import { Ionicons } from '@expo/vector-icons';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 const PwdStorer = () => {
 
-    //States
+    //States PROVA
     const [viewPwd, setViewPwd] = useState(true)
     const [view_FL_PWD_I, setView_FL_PWD_I] = useState(-1);
     const [email, setEmail] = useState("");//Può essere una mail, username, ecc...

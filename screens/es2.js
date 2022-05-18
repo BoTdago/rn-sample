@@ -14,9 +14,7 @@ const Es2 = ({ navigation, route }) => {
     const [isStarted, setIsStarted] = useState(false)
 
     const [timer, setTimer] = useState()
-
     const [totalState, setTotalState] = useState(0)
-
     const [partials, setPartials] = useState([]);
 
     let interval = now - start;
